@@ -80,7 +80,7 @@ For the 5 non-magic numbers use your choice of any of the following methods to g
 * Use the two digit model year of their car and add their lucky number to it.
 * Use the random number between 1 and 50, subtracting one of the generated random numbers.
 * Convert the first letter of their favorite actor/actress to an integer and use that value.
-* Convert the last letter of their favorate actor/actress to an integer and use that value.
+* Convert the last letter of their favorite actor/actress to an integer and use that value.
 * Use the value 42.
 * Use the age of their favorite pet + their car model year.
 * Favorite quarterback number + age of pet + lucky number.
