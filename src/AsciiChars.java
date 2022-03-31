@@ -5,23 +5,26 @@ public class AsciiChars {
 	{
 	    // TODO: print valid numeric input
 		  for(char i = 48; i <= 57; ++i) {
-			  System.out.println(i);
+			  System.out.print(i);
 		  }
+		  System.out.println();
 	}
 	public static void printLowerCase()
 	{
 	    // TODO: print valid LowerCase alphabetic input
 		  for(char i = 97; i <= 122; ++i) {
-			  System.out.println(i);
+			  System.out.print(i);
 		  }
+		  System.out.println();
 	}
 	
 	public static void printUpperCase()
 	{
 	    // TODO: print valid UpperCase alphabetic input
 		  for(char i = 65; i <= 90; ++i) {
-			  System.out.println(i);
+			  System.out.print(i);
 		  }
+		  System.out.println();
 	}
 	  
 	public static void main(String[] args) 

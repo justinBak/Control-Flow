@@ -14,8 +14,12 @@ public class ScanFlow {
 	}
 	
 	public static void main(String[] args) {
-		
 		  Scanner input = new Scanner(System.in);
+		
+		  System.out.println("Please enter your name:");
+		  String name = input.nextLine();
+		  System.out.printf("Hello, %s!\n", name);
+		
 		  int magicBall;
 		  
 		  Random generator = new Random();
@@ -38,7 +42,7 @@ public class ScanFlow {
 					  String favPet = input.nextLine();
 					  
 					  System.out.println("What is the age of your favorite pet?");
-					  String petAge = input.nextLine();
+					  int petAge = Integer.parseInt(input.nextLine());
 					  
 					  System.out.println("What is your lucky number?");
 					  int luckyNum = Integer.parseInt(input.nextLine());
@@ -47,7 +51,7 @@ public class ScanFlow {
 					  System.out.println("Do you have a favorite quarterback? (yes/no)");
 					  String favQtr = input.nextLine();
 		
-					  if (favQtr.equals("yes")) {
+					  if (favQtr.equalsIgnoreCase("yes")) {
 						  System.out.println("What is your favorite jersey number? ");
 						  Integer jerNumber = Integer.parseInt(input.nextLine());
 						  magicBall = jerNumber * randomNumber1;
@@ -55,26 +59,27 @@ public class ScanFlow {
 				
 					  System.out.println("What is the two-digit model year of your car?");
 					  int modelYear = Integer.parseInt(input.nextLine());
-					  int index2 = modelYear + luckyNum;
+					  int index1 = modelYear + luckyNum;
 					  
 					  System.out.println("What is the first name of your favorite actor or actress?");
 					  String favAct = input.nextLine();
 					  
 					  System.out.println("Enter a random number between 1 and 50.");
 					  int randNum = Integer.parseInt(input.nextLine());
-					  int index3 = randomNumber2 - randNum;
+					  int index2 = randomNumber2 - randNum;
 							  
 					  magicBall = clampNumber(magicBall, 1, 75);
-					  System.out.printf("Your MagicBall number is %s.", magicBall);
 					  
-					 /* int [] balls = {0,0,0,0,0};
-					  balls[0] = favPet.charAt(3);
-					  balls[0] = clampNumber(balls[0], 1, 65);
-					  balls[1] = index2;
-					  balls[1] = clampNumber(balls[0], 1, 65);
-					  balls[2] = index3;
-					  balls[2] = clampNumber(balls[0], 1, 65);
-					  System.out.println(balls);*/
+					  //char value = favPet.charAt(2);
+					  //value += 1;
+					  //int number = value;
+					  int [] balls = new int[5];
+					  balls[0] = clampNumber(favPet.charAt(2), 1, 65);
+					  balls[1] = clampNumber(index1, 1, 65);
+					  balls[2] = clampNumber(index2, 1, 65);
+					  balls[3] = clampNumber(favAct.charAt(0), 1, 65);
+					  balls[4] = clampNumber(favAct.length()-1, 1, 65);	  
+					  System.out.printf("Lottery numbers: %d, %d, %d, %d, %d Magic ball: %d", balls[0], balls[1], balls[2], balls[3], balls[4], magicBall);
 				  }
 		
 			  }
